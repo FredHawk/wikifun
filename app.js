@@ -16,8 +16,9 @@ function handleSearch(e) {
       return results;
     })
     // Populate the list with results
-  
+    // .then()
     // update DOM
+    // .then()
     )
     .catch(error => console.error(error));
   
