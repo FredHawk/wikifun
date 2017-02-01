@@ -1,5 +1,17 @@
-const searchField = document.querySelector("#searchField");
-const search = document.querySelector(".search_btn");
+const searchField = document.querySelector('#searchField');
+const search = document.querySelector('.search_btn');
+const listResult = document.querySelector('.results')
+
+function showResults(results) {
+  return (`
+    <li class="result">
+      <img class="result_image" src="https://placehold.it/100x100" alt="PLaceholder">
+      <h4 class="result_title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+      <p class="result_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur architecto cum asperiores dolor delectus tempore quasi aperiam commodi? Aperiam, earum.</p>
+      <a href="#" class="result_link"></a>
+    </li>
+  `);
+}
 
 function handleSearch(e) {
   e.preventDefault();
@@ -16,7 +28,7 @@ function handleSearch(e) {
       return results;
     })
     // Populate the list with results
-    // .then()
+    .then(results => results.map(showResults))
     // update DOM
     // .then()
     )
