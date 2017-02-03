@@ -4,21 +4,21 @@ const listResult = document.querySelector('.results')
 
 function showResults(e) {
   e.preventDefault();
+  const arr = [1,1,11,1,1,1,2,31243];
   const results = handleSearch();
+
   console.log(results);
-  const html = results.map(result => {
-  //   return `
-  //   <li class="result">
-  //     <img class="result_image" src="https://placehold.it/100x100" alt="PLaceholder">
-  //     <h4 class="result_title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-  //     <p class="result_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur architecto cum asperiores dolor delectus tempore quasi aperiam commodi? Aperiam, earum.</p>
-  //     <a href="#" class="result_link"></a>
-  //   </li>
-  // `;
-  return 'yay';
-  console.log('yay');
-  });
-  console.log(results);
+  console.log(arr.length);
+  const html = arr.map(result => {
+    return `
+    <li class="result">
+      <img class="result_image" src="https://placehold.it/100x100" alt="Placeholder">
+      <h4 class="result_title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+      <p class="result_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur architecto cum asperiores dolor delectus tempore quasi aperiam commodi? Aperiam, earum.</p>
+      <a href="#" class="result_link"></a>
+    </li>
+  `;
+  }).join('');
   listResult.innerHTML = html;
 }
 
