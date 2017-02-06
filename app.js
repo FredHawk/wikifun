@@ -5,10 +5,24 @@ const listResult = document.querySelector('.results')
 function showResults(e) {
   e.preventDefault();
   const arr = [1,1,11,1,1,1,2,31243];
-  const results = handleSearch();
-
-  console.log(results);
-  console.log(arr.length);
+  const wikiStuff = new Promise(
+    function(resolve, reject) {
+      const res = handleSearch();
+      if(res) {
+        resolve(res);
+        return res;
+      } else {
+        reject(Error("Failed!"));
+      }
+    }
+  );
+  wikiStuff.then(function(result) {
+    console.log('during promise',  result);
+    // console.log(Promise['["[[PromiseValue]]"]']);
+  });
+  console.log('after promise ', wikiStuff);
+  // console.log(wikiStuff.length);
+  console.log(wikiStuff.length);
   const html = arr.map(result => {
     return `
     <li class="result">
@@ -26,7 +40,7 @@ function handleSearch() {
   let results = [];
   let searchTerm = searchField.value;
   // Remember to change srsearch=green to srsearch=${searchTerm}
-  const api = `https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=pageimages%7Cextracts&titles=Main+Page&generator=search&utf8=1&exsentences=2&exlimit=max&exintro=1&explaintext=1&gsrsearch=green&gsrlimit=10`;
+  const api = `https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=pageimages%7Cextracts&titles=Main+Page&generator=search&utf8=1&exsentences=2&exlimit=max&exintro=1&explaintext=1&gsrsearch=green&gsrlimit=11`;
 
   fetch(api)
     .then(response => response.json())
