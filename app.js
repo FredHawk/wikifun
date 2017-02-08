@@ -31,10 +31,10 @@ function handleSearch(e) {
       const html = results.map(result => {
           return `
           <li class="result">
-            <img class="result_image" src="https://placehold.it/100x100" alt="Placeholder">
+            <a href="https://en.wikipedia.org/?curid=${result.pageid}" class="result_link" target="_blank">
             <h4 class="result_title">${result.title}</h4>
             <p class="result_description">${result.extract}</p>
-            <a href="#" class="result_link"></a>
+            </a>
           </li>
         `;
         }).join('');
