@@ -20,6 +20,8 @@ function handleSearch(e) {
   e.preventDefault();
   let results = [];
   let searchTerm = searchField.value;
+
+  const regex = /\w+\s?/ig;
   // Remember to change srsearch=green to srsearch=${searchTerm}
   const api = `https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=pageimages%7Cextracts&titles=Main+Page&generator=search&utf8=1&exsentences=2&exlimit=max&exintro=1&explaintext=1&gsrsearch=green&gsrlimit=10`;
 
