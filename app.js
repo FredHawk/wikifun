@@ -31,7 +31,7 @@ function handleSearch(e) {
     .then(response => response.json())
     .then(data => {
       Object.keys(data.query.pages).map(key => results.push(data.query.pages[key]))
-      console.log(results);
+      // console.log(results);
       const html = results.map(result => {
           return `
           <li class="result">

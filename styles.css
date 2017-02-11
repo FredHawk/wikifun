@@ -2,3 +2,12 @@
   width: 600px;
   margin: 0 auto;
 }*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.results li {
+  list-style: none;
+  border-left: green solid 4px;
+  color: red;
+}
