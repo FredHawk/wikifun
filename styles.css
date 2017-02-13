@@ -10,6 +10,19 @@
 body {
   background: var(--main-color);
   color: white;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+label {
+  display: none;
+}
+input {
+  font-size: 0.9em;
+  border-radius: 5px;
+  border: var(--main-dark) 1px solid;
+  padding: 0.3rem;
 }
 a {
   text-decoration: none;
@@ -17,6 +30,14 @@ a {
 }
 ul {
   padding: 0;
+  text-align: left;
+}
+.btn {
+  background: #0288D1;
+  font-size: 0.9em;
+  border-radius: 5px;
+  border: var(--main-dark) 1px solid;
+  padding: 0.3rem;
 }
 .results li {
 

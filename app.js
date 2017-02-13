@@ -36,7 +36,7 @@ function handleSearch(e) {
           return `
           <li class="result">
             <a href="https://en.wikipedia.org/?curid=${result.pageid}" class="result_link" target="_blank">
-            <h4 class="result_title">${result.title}</h4>
+            <h3 class="result_title">${result.title}</h3>
             <p class="result_description">${result.extract}</p>
             </a>
           </li>
