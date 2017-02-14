@@ -29,9 +29,15 @@ function handleSearch(e) {
     fetch(api)
       .then(response => response.json())
       .then(data => {
+        if (!data.query) {
+          listResult.innerHTML = `
+            <li class="result">
+              <p>No results for that searchterm.</p>
+            </li>
+          `;
+        } else {
         Object.keys(data.query.pages).map(key => results.push(data.query.pages[key]))
-        // console.log(results);
-        const html = results.map(result => {
+          const html = results.map(result => {
             return `
             <li class="result">
               <a href="https://en.wikipedia.org/?curid=${result.pageid}" class="result_link" target="_blank">
@@ -42,6 +48,7 @@ function handleSearch(e) {
           `;
           }).join('');
           listResult.innerHTML = html;
+        }
       })
       .catch(error => console.error(error));
   }
