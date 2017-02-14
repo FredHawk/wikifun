@@ -42,10 +42,12 @@ ul {
   }
 }
 @media  only screen and (min-device-pixel-ratio: 2), 
-    only screen and (min-resolution: 192dpi) {
-  /* Style Rules */
+    only screen and (min-width: 767px) and (max-width: 1110px) {
   body {
     font-size: 32px;
+  }
+  .container {
+    width: 100%;
   }
 }
 .btn {
