@@ -2,6 +2,8 @@
   --main-color: #113953;
   --main-dark: #18496B;
   --main-bright: #2B76AB;
+  --main-very-bright-blue: #0288D1;
+  --main-turqoise: #5CB3C6;
 }
 /*.container {
   width: 600px;
@@ -11,9 +13,7 @@ body {
   background: var(--main-color);
   color: white;
   text-align: center;
-}
-h1 {
-  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 label {
   display: none;
@@ -33,17 +33,19 @@ ul {
   text-align: left;
 }
 .btn {
-  background: #0288D1;
+  background: var(--main-very-bright-blue);
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.9em;
   border-radius: 5px;
   border: var(--main-dark) 1px solid;
   padding: 0.3rem;
 }
 .results li {
-
   list-style: none;
-  border-left: green solid 4px; /* Add this as a transistion on hover */
   padding: 0 5% 0.1em;
+}
+.results li:hover {
+  border-left: var(--main-turqoise) solid 5px; 
 }
 .results li:nth-child(even) {
   background: var(--main-dark);
@@ -52,4 +54,7 @@ ul {
 .results li:nth-child(odd) {
   background: var(--main-bright);
   color: black;
+}
+.result_description {
+  font-family: 'Quicksand', sans-serif;
 }
