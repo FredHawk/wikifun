@@ -5,10 +5,6 @@
   --main-very-bright-blue: #0288D1;
   --main-turqoise: #5CB3C6;
 }
-/*.container {
-  width: 600px;
-  margin: 0 auto;
-}*/
 body {
   background: var(--main-color);
   color: white;
@@ -31,6 +27,18 @@ a {
 ul {
   padding: 0;
   text-align: left;
+}
+@media (min-width: 850px) {
+  .container {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1050px) {
+  .container {
+    width: 800px;
+    margin: 0 auto;
+  }
 }
 .btn {
   background: var(--main-very-bright-blue);
