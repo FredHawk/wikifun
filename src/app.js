@@ -1,3 +1,5 @@
+import css from './styles.css';
+
 const searchField = document.querySelector('#searchField');
 const search = document.querySelector('.form__button');
 const listResult = document.querySelector('.results')
